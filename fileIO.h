@@ -1,14 +1,24 @@
+/** fileIO.h
+ */
+
+#ifndef FILEIO_H
+#define FILEIO_H
+
 #include <stdio.h>
 
 #include "crops.h"
 
 //funct 3
-void createFile(char fileName[], cropTile** crops, int* plotCount, int seedCountArray[], int* playerCash);
+/* code was redundant
+void createFile(char fileName[], cropTile** crops, int* plotWidth, int* plotHeight, int seedCountArray[], int* playerCash);
+*/
 
+FILE* safeOpenFile(char fileName[], char mode[]);
 //funct 4
-void openFile(char fileName[], cropTile** crops, int* plotCount, int seedCountArray[], int* playerCash);
+void openFile(char fileName[], cropTile** crops, int* plotWidth, int* plotHeight, int* playerCash);
 
 //funct 5
-void saveFile(char fileName[], cropTile** crops, int* plotCount, int seedCountArray[], int* playerCash);
+void saveFile(char fileName[], cropTile** crops, int* plotWidth, int* plotHeight, int* playerCash);
 
-FILE* safeOpenFile(char fileName[], char mode);
+
+#endif // FILEIO_H
